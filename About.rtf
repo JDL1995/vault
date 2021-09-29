@@ -1,0 +1,31 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8660\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Hash and Validate App\
+\
+Some details\
+```\
+Http is the standard for rest API designs.\
+\
+GRPC is a different data transfer protocol which differs by sending directions to perform an action; ysending a request to perform remote procedures that are running over a network in proto3 rather than http. (Remote Procedure Call)\
+\
+One benefit of using gRPC is that this reduces the size of the request packet.\
+```\
+This App\
+\
+The Service is coded in go and contains two methods: Hash and Validate.\
+This service is within the package called pb(protocol buffer)\
+\
+To enable our GO application to function with proto3 code, we can use a GO plugin\
+(go get -u github.com/golang/protobuf/\{proto,protoc-gen-go\} )\
+ to generate GO Code for us which will enable our application to function with GRPC\
+\
+Within our pb folder the command <\'97 protocol vault.proto \'97go_out=plugins=grpc:. \'97>\
+will generate go code in a file vault.pb.go which enables us to consume and expose the service.\
+\
+\
+}
